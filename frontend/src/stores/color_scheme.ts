@@ -10,7 +10,7 @@ export const color_scheme = localStorageSyncedStore<
 >(
   "theme",
   color_scheme_validator,
-  () => "light dark",
+  () => "light",
   () => [
     ["light dark", `⚙️ ${_("System")}`],
     ["dark", `🌙 ${_("Dark")}`],
