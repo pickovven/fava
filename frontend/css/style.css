@@ -1,6 +1,7 @@
 :root {
   /* Fonts */
-  --font-family: "Fira Sans", sans-serif;
+  --font-family: "Lora", Georgia, serif;
+  --font-family-headings: "Poppins", Arial, sans-serif;
   --font-family-monospaced: "Fira Mono", monospace;
   --font-family-editor: "Source Code Pro", monospace;
 
@@ -12,6 +13,15 @@
   --z-index-overlay: 3;
   --z-index-keyboard-overlays: 4;
 
+  /* Anthropic brand colors */
+  --brand-dark: #141413;
+  --brand-light: #faf9f5;
+  --brand-mid-gray: #b0aea5;
+  --brand-light-gray: #e8e6dc;
+  --brand-orange: #d97757;
+  --brand-blue: #6a9bcc;
+  --brand-green: #788c5d;
+
   /* Named colors */
   --error: hsl(0deg 100% 30%);
   --warning: hsl(52deg 84% 56%);
@@ -22,22 +32,22 @@
   --dark-gray: hsl(0deg 0% 25%);
 
   /* Base colors (backgrounds) */
-  --background: light(hsl(0deg 0% 100%), hsl(0deg 0% 15%));
-  --background-darker: light-dark(hsl(0deg 0% 95%), hsl(0deg 0% 20%));
-  --background-darkest: light-dark(hsl(0deg 0% 90%), hsl(0deg 0% 25%));
-  --background-button: light-dark(hsl(0deg 0% 80%), hsl(0deg 0% 35%));
+  --background: light-dark(#faf9f5, #141413);
+  --background-darker: light-dark(#e8e6dc, #1e1d1b);
+  --background-darkest: light-dark(#d8d6cc, #252420);
+  --background-button: light-dark(#b0aea5, #3a3835);
 
   /* Base colors (borders) */
-  --border-lighter: light-dark(hsl(0deg 0% 90%), hsl(0deg 0% 25%));
-  --border: light-dark(hsl(0deg 0% 85%), hsl(0deg 0% 30%));
-  --border-darker: light-dark(hsl(0deg 0% 80%), hsl(0deg 0% 35%));
+  --border-lighter: light-dark(#e8e6dc, #2a2926);
+  --border: light-dark(#d8d6cc, #333230);
+  --border-darker: light-dark(#b0aea5, #3a3835);
 
   /* Base colors (foreground) */
-  --text-color: light-dark(hsl(0deg 0% 25%), hsl(0deg 0% 80%));
-  --text-color-lighter: light-dark(hsl(0deg 0% 30%), hsl(0deg 0% 75%));
-  --text-color-lightest: light-dark(hsl(0deg 0% 40%), hsl(0deg 0% 65%));
-  --link-color: light-dark(hsl(203deg 100% 32%), hsl(203deg 100% 68%));
-  --link-hover-color: var(--text-color-lighter);
+  --text-color: light-dark(#141413, #e8e6dc);
+  --text-color-lighter: light-dark(#2a2926, #d0cec5);
+  --text-color-lightest: light-dark(#4a4845, #b0aea5);
+  --link-color: light-dark(#6a9bcc, #8ab5e0);
+  --link-hover-color: var(--brand-orange);
 
   /* Base elements */
   --heading-color: var(--text-color);
@@ -51,14 +61,14 @@
   --box-shadow-overlay: 0 0 20px var(--overlay-wrapper-background);
 
   /* Buttons */
-  --button-color: hsl(0deg 0% 100%);
-  --button-background: hsl(203deg 100% 32%);
+  --button-color: #faf9f5;
+  --button-background: #d97757;
   --button-muted-color: var(--text-color);
   --button-muted-background: var(--background-button);
 
   /* Sidebar */
   --sidebar-color: var(--text-color-lighter);
-  --sidebar-hover-color: var(--link-color);
+  --sidebar-hover-color: var(--brand-orange);
   --sidebar-background: var(--background-darker);
   --sidebar-border: var(--border-lighter);
 
@@ -67,21 +77,21 @@
   --summary-background-darker: var(--background-darkest);
 
   /* Header */
-  --header-color: hsl(0deg 0% 100%);
-  --header-background: light-dark(hsl(203deg 100% 32%), hsl(203deg 100% 25%));
-  --header-placeholder-color: hsl(203deg 47% 66%);
-  --header-placeholder-background: hsl(203deg 56% 45%);
+  --header-color: #faf9f5;
+  --header-background: light-dark(#141413, #0d0d0c);
+  --header-placeholder-color: #b0aea5;
+  --header-placeholder-background: #2a2926;
 
   /* Tables */
   --table-header-text: var(--text-color-lightest);
   --table-header-background: var(--background-darkest);
   --table-border: var(--border-lighter);
   --table-background-even: var(--background-darker);
-  --treetable-expander: light-dark(hsl(210deg 30% 45%), hsl(210deg 30% 55%));
+  --treetable-expander: light-dark(#6a9bcc, #8ab5e0);
 
   /* Amount differences. */
   --diff-red: light-dark(hsl(0deg 48% 40%), hsl(0deg 48% 60%));
-  --diff-green: light-dark(hsl(125deg 48% 40%), hsl(125deg 48% 60%));
+  --diff-green: light-dark(#788c5d, #9aaf78);
   --diff-negative: var(--diff-red);
   --diff-positive: var(--diff-green);
 
@@ -115,14 +125,14 @@
   --bql-errors: var(--text-color);
 
   /* Misc */
-  --notification-color: hsl(0deg 0% 100%);
+  --notification-color: #faf9f5;
   --chart-axis: hsl(0deg 0% 60%);
   --chart-line-at-zero: hsl(0deg 0% 40%);
   --autocomplete-match: hsl(39deg 100% 70% / 50%);
-  --mobile-button-text: light-dark(hsl(0deg 0% 0%), hsl(0deg 0% 79%));
-  --placeholder-color: light-dark(hsl(0deg 0% 47%), hsl(0deg 0% 85%));
-  --placeholder-background: light-dark(hsl(0deg 0% 100%), hsl(0deg 0% 30%));
-  --dragover-background: hsl(203deg 100% 32% / 50%);
+  --mobile-button-text: light-dark(#141413, #e8e6dc);
+  --placeholder-color: light-dark(#4a4845, #b0aea5);
+  --placeholder-background: light-dark(#faf9f5, #1e1d1b);
+  --dragover-background: #d97757a0;
   --overlay-wrapper-background: hsl(0deg 0% 50% / 50%);
 
   /* Help pages */
