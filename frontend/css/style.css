@@ -22,7 +22,7 @@
   --dark-gray: hsl(0deg 0% 25%);
 
   /* Base colors (backgrounds) */
-  --background: light-dark(hsl(0deg 0% 100%), hsl(0deg 0% 15%));
+  --background: light(hsl(0deg 0% 100%), hsl(0deg 0% 15%));
   --background-darker: light-dark(hsl(0deg 0% 95%), hsl(0deg 0% 20%));
   --background-darkest: light-dark(hsl(0deg 0% 90%), hsl(0deg 0% 25%));
   --background-button: light-dark(hsl(0deg 0% 80%), hsl(0deg 0% 35%));
