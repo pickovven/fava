@@ -4,7 +4,7 @@
   --font-family-monospaced: "Fira Mono", monospace;
   --font-family-editor: "Source Code Pro", monospace;
 
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Scale of z-index values */
   --z-index-floating-ui: 1;
